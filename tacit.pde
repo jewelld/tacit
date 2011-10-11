@@ -3,11 +3,9 @@
 //      Version 11.08.04
 //  Licensed under Creative Commons Attribution-Noncommercial-Share Alike 3.0
 //  http://creativecommons.org/licenses/by-nc-sa/3.0/us/
-//    (In short: Do what you want, as long as you credit me, don't relicense it and 
-//    don't sell it or use it in anything you sell without contacting me.)
+//  (In short: Do what you want, as long as you credit me, don't relicense it and don't sell it or use it in anything you sell without contacting me.)
 //
-//  Written for Arduino authoring environment version 0022 and a Arduino Mini Pro 5V 
-//  but should work on any Arduino/Arduino compatible that provides 5 volts.
+//  Written for Arduino authoring environment version 0022 and a Arduino Mini Pro 5V but should work on any Arduino/Arduino compatible that provides 5 volts.
 //
 // This version supports the following hardware:
 //      Parallax PING))) ultrasonic sensors for range finding
@@ -19,6 +17,7 @@
 // Version history:
 //  11.08.07 - original
 //  11.08.14 - Added code so servos apply constant pressure even when readings are not changing.
+//  11.10.11 - Added pause after each sensor reading to fix reported issue with left sensor occasionally giving garbage responses.
 
 #include <Servo.h>
 const int MaxSensors = 2;                     // The number of sensor/servo pairs.
@@ -94,6 +93,7 @@ void loop(){
 	      servoLocations[i]=oldLocation;
 	  }
     }
+    delay(20); // Added to fix left sensor misbehavior reported by Rob.
   }
 
   latestReading++; // Increment the reading counter so we know where we're at.
