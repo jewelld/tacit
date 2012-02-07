@@ -1,9 +1,23 @@
 // Tacit, Wrist mounted tactile feedback for the blind.
 //   By Steve Hoefer at Grathio Labs (http://grathio.com)
-//      Version 11.08.04
-//  Licensed under Creative Commons Attribution-Noncommercial-Share Alike 3.0
-//  http://creativecommons.org/licenses/by-nc-sa/3.0/us/
-//  (In short: Do what you want, as long as you credit me, don't relicense it and don't sell it or use it in anything you sell without contacting me.)
+//     Version 12.02.04
+//
+//  Copyright (c) 2012 Steve Hoefer
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
+//  associated documentation files (the "Software"), to deal in the Software without restriction,  
+//  including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+//   and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, 
+//   subject to the following conditions:
+//  
+//  The above copyright notice and this permission notice shall be included in all copies or substantial 
+//  portions of the Software. 
+//   
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
+//  LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN 
+//  NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+//  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+//  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+//
 //
 //  Written for Arduino authoring environment version 0022 and a Arduino Mini Pro 5V but should work on any Arduino/Arduino compatible that provides 5 volts.
 //
@@ -18,6 +32,7 @@
 //  11.08.07 - original
 //  11.08.14 - Added code so servos apply constant pressure even when readings are not changing.
 //  11.10.11 - Added pause after each sensor reading to fix reported issue with left sensor occasionally giving garbage responses.
+//  12.02.04 - Changed license from CC BY-NC-SA to the MIT license.
 
 #include <Servo.h>
 const int MaxSensors = 2;                     // The number of sensor/servo pairs.
